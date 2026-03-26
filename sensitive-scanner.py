@@ -11,7 +11,7 @@ def mask_value(value, sens_type):
     elif sens_type == '手机号' and len(value) == 11:
         # 保留前3位和后4位，中间用4个*代替
         return value[:3] + '****' + value[-4:]
-    return value  # 如果格式不对，返回原值
+    return value  
 
 
 
@@ -184,8 +184,5 @@ if __name__ == '__main__':
     generate_html_report(results, '敏感信息报告.html')
 
     print("\n完成！用浏览器打开 '敏感信息报告.html' 查看报告")
-
-# for r in info_list:
-#     print(f"第{r['行号']}行 {r['列名']} 发现{r['类型']}: {r['值']}")
 
 
